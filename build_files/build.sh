@@ -31,7 +31,6 @@ dnf5 -y copr disable solopasha/hyprland
 # more desktop-environment utils
 dnf5 -y install	\
 	dunst		\
-	dolphin		\
 	kitty
 
 #### Example for enabling a System Unit File
