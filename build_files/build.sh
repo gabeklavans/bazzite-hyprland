@@ -12,16 +12,22 @@ set -ouex pipefail
 # remove kde plasma
 dnf5 rm plasma-workspace plasma-* kde-* -y
 
-# set up hyprland
-dnf5 in hyprland hyprcursor -y
+# setup hyprland from COPR
+dnf5 -y copr enable solopasha/hyprland
+dnf5 -y install		\
+	hyprland		\
+	hyprpaper		\
+	hyprpicker		\
+	hypridle		\
+	hyprlock		\
+	hyprsunset		\
+	hyprpolkitagent	\
+	hyprsysteminfo	\
+	hyprpanel
+dnf5 -y copr disable solopasha/hyprland
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# more desktop-environment utils
+dnf5 -y install dunst
 
 #### Example for enabling a System Unit File
-
 systemctl enable podman.socket
