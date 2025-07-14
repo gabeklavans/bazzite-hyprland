@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # remove kde plasma
-dnf5 rm plasma-workspace plasma-* kde-* -y
+dnf5 -y remove plasma-workspace plasma-* kde-*
 
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
@@ -23,11 +23,16 @@ dnf5 -y install		\
 	hyprsunset		\
 	hyprpolkitagent	\
 	hyprsysteminfo	\
-	hyprpanel
+	hyprpanel		\
+	qt6ct-kde		\
+	uwsm
 dnf5 -y copr disable solopasha/hyprland
 
 # more desktop-environment utils
-dnf5 -y install dunst
+dnf5 -y install	\
+	dunst		\
+	dolphin		\
+	kitty
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
