@@ -24,14 +24,14 @@ dnf5 -y install		\
 	hyprpolkitagent	\
 	hyprsysteminfo	\
 	hyprpanel		\
-	qt6ct-kde		\
-	uwsm
+	qt6ct-kde
 dnf5 -y copr disable solopasha/hyprland
 
 # more desktop-environment utils
 dnf5 -y install	\
-	dunst		\
-	kitty
+	kitty		\
+	sddm		\
+	pipewire
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
