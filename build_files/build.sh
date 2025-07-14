@@ -14,17 +14,19 @@ dnf5 -y remove plasma-workspace plasma-* kde-*
 
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
-dnf5 -y install		\
-	hyprland		\
-	hyprpaper		\
-	hyprpicker		\
-	hypridle		\
-	hyprlock		\
-	hyprsunset		\
-	hyprpolkitagent	\
-	hyprsysteminfo	\
-	hyprpanel		\
-	qt6ct-kde
+dnf5 -y install			\
+	hyprland			\
+	hyprpaper			\
+	hyprpicker			\
+	hypridle			\
+	hyprlock			\
+	hyprsunset			\
+	hyprpolkitagent		\
+	hyprsysteminfo		\
+	hyprpanel			\
+	qt6ct-kde			\
+	hyprland-qt-support	\
+	hyprland-qtutils
 dnf5 -y copr disable solopasha/hyprland
 
 # more desktop-environment utils
