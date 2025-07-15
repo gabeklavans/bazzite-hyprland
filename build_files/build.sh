@@ -31,6 +31,7 @@ dnf5 -y copr disable solopasha/hyprland
 
 # more desktop-environment utils
 dnf5 -y install	\
+	dolphin		\
 	kitty		\
 	sddm		\
 	pipewire		\
