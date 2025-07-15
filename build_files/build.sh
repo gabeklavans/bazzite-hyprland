@@ -33,7 +33,8 @@ dnf5 -y copr disable solopasha/hyprland
 dnf5 -y install	\
 	kitty		\
 	sddm		\
-	pipewire
+	pipewire		\
+	wofi
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
