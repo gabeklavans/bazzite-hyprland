@@ -36,5 +36,5 @@ dnf5 -y install	\
 	pipewire		\
 	wofi
 
-#### Example for enabling a System Unit File
 systemctl enable podman.socket
+systemctl --global enable hyprpanel.service
