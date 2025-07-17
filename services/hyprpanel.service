@@ -1,0 +1,10 @@
+[Unit]
+Description=Hyprpanel Service
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/hyprpanel
+Restart=always
+
+[Install]
+WantedBy=default.target
