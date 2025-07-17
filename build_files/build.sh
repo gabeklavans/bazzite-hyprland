@@ -30,11 +30,12 @@ dnf5 -y install			\
 dnf5 -y copr disable solopasha/hyprland
 
 # more desktop-environment utils
-dnf5 -y install	\
-	kitty		\
-	sddm		\
+dnf5 -y install		\
+	kitty			\
+	sddm			\
 	pipewire		\
-	wofi
+	wofi			\
+	brightnessctl
 
 systemctl enable podman.socket
 systemctl --global enable hyprpanel.service
